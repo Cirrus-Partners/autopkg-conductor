@@ -103,6 +103,10 @@ ProcessResults() {
         log_grammar='was built'
         log_level='info'
         ;;
+      virus_total_analyzer_summary_result)
+        log_grammar='was queried from VirusTotal'
+        log_level='info'
+        ;;
       munki_importer_summary_result)
         log_grammar='was imported into Munki'
         log_level='default'
