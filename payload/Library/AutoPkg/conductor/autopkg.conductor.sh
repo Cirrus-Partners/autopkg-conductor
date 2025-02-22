@@ -10,7 +10,7 @@ set +e -uo pipefail
 #
 # @author  Shawn Maddock <smaddock@gocirrus.com>
 # @license https://opensource.org/licenses/MIT MIT
-# @see     https://gitlab.gocirr.us/auto/autopkg-conductor
+# @see     https://github.com/Cirrus-Partners/autopkg-conductor
 
 ########################################
 ###         CONFIG VARIABLES         ###
