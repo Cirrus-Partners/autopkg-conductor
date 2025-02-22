@@ -10,22 +10,15 @@
 		<string>/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
 	</dict>
 	<key>Label</key>
-	<string>com.github.autopkg-nightly-run</string>
-	<key>ProgramArguments</key>
-	<array>
-		<string>/usr/local/bin/autopkg-conductor.sh</string>
-	</array>
-	<key>RunAtLoad</key>
-	<false/>
-	<key>StartCalendarInterval</key>
-	<array>
-		<dict>
-			<key>Hour</key>
-			<integer>2</integer>
-			<key>Minute</key>
-			<integer>0</integer>
-		</dict>
-	</array>
+	<string>com.github.autopkg.conductor</string>
+	<key>Program</key>
+	<string>/Library/AutoPkg/conductor/autopkg.conductor.sh</string>
+	<key>StandardErrorPath</key>
+	<string>/Library/Logs/com.github.autopkg/conductor_error.log</string>
+	<key>StandardOutPath</key>
+	<string>/Library/Logs/com.github.autopkg/conductor_error.log</string>
+	<key>StartInterval</key>
+	<integer>3333</integer>
 	<key>UserName</key>
 	<string>autopkg</string>
 </dict>

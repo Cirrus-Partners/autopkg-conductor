@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Make sure path is writable by all users
+chmod 777 "/Library/Logs/com.github.autopkg"
+
+# Make sure script is executable
+chmod +x "/Library/AutoPkg/conductor/autopkg.conductor.sh"
+
+# Bail if not installed to the current startup volume
+if [[ $3 != "/" ]]; then
+  exit
+fi
+
+# Reload the LaunchDaemons
+if launchctl print system/com.github.autopkg.conductor; then
+  launchctl bootout system/com.github.autopkg.conductor
+fi
+launchctl bootstrap system /Library/LaunchDaemons/com.github.autopkg.conductor.plist
+launchctl enable system/com.github.autopkg.conductor
